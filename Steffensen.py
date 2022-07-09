@@ -30,7 +30,7 @@ def Steffensen(a, b, error):
             p = xn - (pow(p1,2)/(p2 - p1))  
         except ZeroDivisionError:
             break
-        ep = abs(p-xn)
+        ep = (abs(p-xn)/p)*100
         tabla.append([i, xn, p1, p2, p, ep])
         xn = p
         i+=1    
